@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECHZONE — Smart Tech, Better Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm sticky-top" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="#" aria-label="TECHZONE home">
+      <span class="brand-orbit" aria-hidden="true"><i class="fa-solid fa-microchip"></i></span>
+      <span>TECHZONE</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-4 text-center">
+        <li class="nav-item"><a class="nav-link active" href="#" data-i18n="navHome">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#shopSection" data-i18n="navShop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#collectionSection" data-i18n="navCollection">Collection</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blogSection" data-i18n="navBlog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contactSection" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <div class="d-flex gap-2 align-items-center justify-content-center mt-3 mt-lg-0">
+        <div class="lang-switch" id="langSwitch">
+          <span data-lang="en">EN</span><span data-lang="km">ខ្មែរ</span>
+        </div>
+        <button class="nav-icon-btn" id="navSearchBtn" type="button" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="dropdown">
+          <button class="nav-icon-btn account-trigger" id="accountButton" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+            <i class="fa-regular fa-user" id="accountIcon"></i><span class="account-initial d-none" id="accountInitial"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end account-menu" id="accountMenu"></div>
+        </div>
+        <button class="nav-icon-btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="font-size:.6rem;" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge-pill mb-3" data-i18n="heroBadge">NEW ARRIVALS</span>
+      <h1 class="mt-3"><span data-i18n="heroTitle1">SMART TECH</span><br><span class="accent" data-i18n="heroTitle2">BETTER LIFE</span></h1>
+      <p class="lead-text my-3" data-i18n="heroLead">
+        Discover the latest smart devices that power your productivity and entertainment.
+      </p>
+      <div class="d-flex gap-3 flex-wrap">
+        <button class="btn btn-primary rounded-pill px-4 py-2" data-i18n="heroBtnShop">Shop Now →</button>
+        <button class="btn btn-outline-primary rounded-pill px-4 py-2 bg-white" data-i18n="heroBtnDeals">View Deals</button>
+      </div>
+      <!-- floating badges: local icon photo, falls back to a placeholder if not supplied yet -->
+      <div class="floating-badges">
+        <div class="badge-card">
+          <i class="fa-solid fa-shield-halved badge-fa-icon" aria-hidden="true"></i>
+          <span data-i18n="topWarranty">1 Year Warranty</span>
+        </div>
+        <div class="badge-card">
+          <i class="fa-solid fa-truck-fast badge-fa-icon" aria-hidden="true"></i>
+          <span data-i18n="topShipping2">Free Shipping</span>
+        </div>
+        <div class="badge-card">
+          <i class="fa-solid fa-headset badge-fa-icon" aria-hidden="true"></i>
+          <span data-i18n="topSupport">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="container">
+  <div class="features-strip">
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="feature-item">
+          <i class="fa-solid fa-gem feature-fa-icon" aria-hidden="true"></i>
+          <div><h6 data-i18n="feat1Title">Premium Quality</h6><p data-i18n="feat1Desc">Carefully selected</p></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-item">
+          <i class="fa-solid fa-tags feature-fa-icon" aria-hidden="true"></i>
+          <div><h6 data-i18n="feat2Title">Best Prices</h6><p data-i18n="feat2Desc">Affordable & competitive</p></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-item">
+          <i class="fa-solid fa-rotate-left feature-fa-icon" aria-hidden="true"></i>
+          <div><h6 data-i18n="feat3Title">Easy Returns</h6><p data-i18n="feat3Desc">30-day money back</p></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="feature-item">
+          <i class="fa-solid fa-lock feature-fa-icon" aria-hidden="true"></i>
+          <div><h6 data-i18n="feat4Title">Secure Checkout</h6><p data-i18n="feat4Desc">100% safe</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES (rendered by js/app.js) -->
+<div class="container py-5" id="categoriesSection">
+  <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+    <div>
+      <div class="text-primary fw-bold small mb-1" data-i18n="catEyebrow">BROWSE COLLECTIONS</div>
+      <h3 class="fw-bold mb-0" data-i18n="catTitle">Shop by Category</h3>
+    </div>
+    <a href="#" class="btn btn-outline-primary rounded-pill btn-sm" data-i18n="catViewAll">View All Categories →</a>
+  </div>
+  <div class="row g-3" id="categoryGrid"></div>
+</div>
+
+<!-- SHOP: search + brand/category filters + product grid -->
+<div class="container pb-5" id="shopSection">
+  <div class="mb-4">
+    <div class="text-primary fw-bold small mb-1" data-i18n="shopEyebrow">FROM OUR CATALOG</div>
+    <h3 class="fw-bold mb-0" data-i18n="shopTitle">Shop All Products</h3>
+  </div>
+
+  <div class="shop-toolbar mb-4">
+    <div class="search-wrap mb-3">
+      <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="search" class="form-control shop-search" id="productSearch" data-i18n-ph="searchPlaceholder" placeholder="Search products by name...">
+    </div>
+
+    <div class="pill-scroll mb-2" id="categoryFilterList"></div>
+    <div class="pill-scroll brand-pill-row" id="brandFilterList"></div>
+
+    <div class="toolbar-footer d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="shop-results-count" id="shopResultsCount"></div>
+      <div class="d-flex align-items-center gap-2">
+        <select class="sort-select" id="sortSelect">
+          <option value="popularity" data-i18n="sortPopularity">Sort: Popularity</option>
+          <option value="priceLow" data-i18n="sortPriceLow">Price: Low to High</option>
+          <option value="priceHigh" data-i18n="sortPriceHigh">Price: High to Low</option>
+          <option value="nameAZ" data-i18n="sortNameAZ">Name: A to Z</option>
+        </select>
+        <button class="btn btn-outline-secondary btn-sm rounded-pill clear-filters-btn" id="clearFiltersBtn" data-i18n="clearFilters">Clear Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-3" id="productGrid"></div>
+  <p class="text-center text-body-secondary small py-4 d-none" id="noResultsMsg" data-i18n="noResultsMsg">No products match your filters.</p>
+  <div class="shop-more-wrap" id="showMoreWrap">
+    <button class="show-more-btn" id="showMoreBtn" type="button">
+      <span data-i18n="showMoreProducts">Show more products</span>
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+<div class="container pb-5" id="collectionSection">
+  <div class="mb-4">
+    <div class="text-primary fw-bold small mb-1" data-i18n="collectionEyebrow">CURATED FOR YOU</div>
+    <h3 class="fw-bold mb-0" data-i18n="collectionTitle">Our Collections</h3>
+  </div>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="collection-card col-c1" data-category="all" data-sort="popularity">
+        <img class="col-icon-img" alt="New arrivals" loading="lazy"
+            src="image/iphone-17-pro-max.jpg">
+        <h6 data-i18n="colNew">New Arrivals</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="collection-card col-c2" data-category="all" data-sort="priceHigh">
+        <img class="col-icon-img" alt="Best sellers" loading="lazy"
+            src="image/samsungs26ultra.jpg">
+        <h6 data-i18n="colBest">Best Sellers</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="collection-card col-c3" data-category="gaming" data-sort="popularity">
+        <img class="col-icon-img" alt="Gaming zone" loading="lazy"
+            src="image/Gaming Zone.jpg">
+        <h6 data-i18n="colGaming">Gaming Zone</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="collection-card col-c4" data-category="laptops" data-sort="popularity">
+        <img class="col-icon-img" alt="Home & office" loading="lazy"
+            src="image/Home & Office.jpg">
+        <h6 data-i18n="colHome">Home & Office</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG (rendered by js/app.js) -->
+<div class="container pb-5" id="blogSection">
+  <div class="mb-4">
+    <div class="text-primary fw-bold small mb-1" data-i18n="blogEyebrow">FROM THE BLOG</div>
+    <h3 class="fw-bold mb-0" data-i18n="blogTitle">Latest Articles</h3>
+  </div>
+  <div class="row g-3" id="blogGrid"></div>
+</div>
+
+<!-- CONTACT -->
+<div class="container pb-5" id="contactSection">
+  <div class="mb-4">
+    <div class="text-primary fw-bold small mb-1" data-i18n="contactEyebrow">GET IN TOUCH</div>
+    <h3 class="fw-bold mb-0" data-i18n="contactTitle">Contact Us</h3>
+  </div>
+  <div class="row g-4">
+    <div class="col-lg-5">
+      <div class="contact-info-card">
+        <i class="fa-solid fa-location-dot contact-fa-icon" aria-hidden="true"></i>
+        <div><h6 data-i18n="contactAddrLabel">Address</h6><p data-i18n="contactAddrValue">Phnom Penh, Cambodia</p></div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-solid fa-phone contact-fa-icon" aria-hidden="true"></i>
+        <div><h6 data-i18n="contactPhoneLabel">Phone</h6><p>+855 96 426 910 5</p></div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-solid fa-envelope contact-fa-icon" aria-hidden="true"></i>
+        <div><h6 data-i18n="contactEmailLabel">Email</h6><p>lybunlim67@gmail.com</p></div>
+      </div>
+      <div class="contact-info-card">
+        <i class="fa-solid fa-clock contact-fa-icon" aria-hidden="true"></i>
+        <div><h6 data-i18n="contactHoursLabel">Working Hours</h6><p data-i18n="contactHoursValue">Mon - Sat: 8AM - 6PM</p></div>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="contact-form-box">
+        <form id="contactForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="contactName" data-i18n-ph="contactNamePh" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="contactEmail" data-i18n-ph="contactEmailPh" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="contactMsg" rows="4" data-i18n-ph="contactMsgPh" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary rounded-pill px-4" data-i18n="contactSend">Send Message</button>
+          <div id="contactSuccessMsg" class="text-success small mt-3 d-none" data-i18n="contactSentMsg">✓ Message sent! We'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <div class="footer-brand mb-2">TECHZONE</div>
+        <p data-i18n="footerAbout">Your trusted destination for smart gadgets and accessories.</p>
+        <div class="footer-socials">
+          <span>FB</span><span>IG</span><span>TW</span><span>YT</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 data-i18n="footerQuickLinks">Quick Links</h6>
+        <a href="#" data-i18n="navHome">Home</a>
+        <a href="#categoriesSection" data-i18n="navShop">Shop</a>
+        <a href="#collectionSection" data-i18n="navCollection">Collection</a>
+        <a href="#blogSection" data-i18n="navBlog">Blog</a>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 data-i18n="footerCategories">Categories</h6>
+        <a href="#" data-i18n="catSmartphones">Smartphones</a>
+        <a href="#" data-i18n="catLaptops">Laptops</a>
+        <a href="#" data-i18n="catSmartwatches">Smartwatches</a>
+        <a href="#" data-i18n="catGaming">Gaming</a>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 data-i18n="footerNewsletter">Newsletter</h6>
+        <p data-i18n="footerNewsletterDesc">Subscribe to get special offers.</p>
+        <form class="d-flex gap-2" id="newsletterForm">
+          <input type="email" class="form-control form-control-sm" data-i18n-ph="footerEmailPh" placeholder="Enter your email" required>
+          <button class="btn btn-primary btn-sm rounded-pill px-3" data-i18n="footerSubscribe">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footerCopyright">© 2026 TECHZONE. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- CART OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" data-i18n="cartTitle">Shopping Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItemsWrap" class="flex-grow-1"></div>
+    <div class="border-top pt-3 mt-3">
+      <div class="d-flex justify-content-between mb-3">
+        <span data-i18n="cartSubtotal">Subtotal</span>
+        <strong id="cartSubtotal">$0</strong>
+      </div>
+      <button class="btn btn-primary w-100 rounded-pill" id="checkoutBtn" data-bs-toggle="modal" data-bs-target="#checkoutModal" data-i18n="cartCheckout">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL MODAL -->
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body pt-0" style="max-height:80vh;overflow-y:auto;">
+        <div class="mb-3 rounded-4 overflow-hidden" style="height:220px;background:var(--card-bg);">
+          <img id="pdImage" style="width:100%;height:100%;object-fit:cover;" src="" alt="">
+        </div>
+        <h4 class="fw-bold" id="pdName"></h4>
+        <div class="text-primary fw-bold fs-4 mb-2" id="pdPrice"></div>
+        <p class="text-body-secondary small" id="pdDesc"></p>
+        <div class="d-flex justify-content-between small text-body-secondary mb-2 pd-meta-row">
+          <span><i class="fa-solid fa-mobile-screen pd-meta-icon"></i><span data-i18n="detailCategory">Category</span>: <span id="pdCategory"></span></span>
+          <span><i class="fa-solid fa-box pd-meta-icon"></i><span id="pdStock"></span></span>
+        </div>
+        <div class="small text-body-secondary mb-3 pd-meta-row">
+          <i class="fa-solid fa-tag pd-meta-icon"></i><span data-i18n="detailBrand">Brand</span>: <span id="pdBrand"></span>
+        </div>
+        <hr class="mt-0 mb-3">
+        <div class="mb-3" id="pdSpecsWrap">
+          <h6 class="fw-bold small text-uppercase text-primary mb-2" data-i18n="detailSpecs">Specifications</h6>
+          <ul id="pdSpecsList" class="pd-specs-list"></ul>
+        </div>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <span data-i18n="detailQty">Quantity</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-outline-secondary" id="pdQtyMinus">−</button>
+            <span id="pdQty">1</span>
+            <button class="btn btn-sm btn-outline-secondary" id="pdQtyPlus">+</button>
+          </div>
+        </div>
+        <button class="btn btn-primary w-100 rounded-pill" id="pdAddToCart"><i class="fa-solid fa-cart-shopping me-2"></i><span data-i18n="addToCart">Add to Cart</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT / PAYMENT / SUCCESS MODAL -->
+<div class="modal fade checkout-modal" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content checkout-shell">
+      <div class="checkout-topbar">
+        <div class="checkout-heading">
+          <span class="checkout-kicker" data-i18n="checkoutSecure">SECURE CHECKOUT</span>
+          <h2 id="checkoutModalTitle" data-i18n="checkoutTitle">Checkout</h2>
+          <p data-i18n="checkoutSubtitle">Complete your order safely and quickly.</p>
+          <div class="checkout-security-chip"><i class="fa-solid fa-shield-halved"></i><span data-i18n="checkoutProtected">Protected checkout • SSL secured</span></div>
+        </div>
+        <button type="button" class="checkout-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="checkout-progress" aria-hidden="true">
+        <div class="checkout-step active"><span>1</span><b data-i18n="checkoutStepInfo">Information</b></div>
+        <div class="checkout-line"></div>
+        <div class="checkout-step active"><span><i class="fa-solid fa-lock"></i></span><b data-i18n="checkoutStepPayment">Payment</b></div>
+        <div class="checkout-line"></div>
+        <div class="checkout-step"><span>3</span><b data-i18n="checkoutStepDone">Confirmation</b></div>
+      </div>
+
+      <div class="checkout-body">
+        <form id="paymentForm" class="checkout-form" novalidate>
+          <div class="checkout-section-title">
+            <div class="checkout-section-icon"><i class="fa-regular fa-user"></i></div>
+            <div><h3 data-i18n="checkoutCustomerTitle">Customer information</h3><p data-i18n="checkoutCustomerDesc">Where should we deliver your order?</p></div>
+          </div>
+
+          <div class="checkout-field">
+            <label for="checkoutName" data-i18n="payFullName">Full Name</label>
+            <div class="checkout-input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input id="checkoutName" type="text" autocomplete="name" data-i18n-ph="checkoutNamePh" placeholder="Enter your full name" required>
+            </div>
+            <small class="checkout-error" data-error-for="checkoutName"></small>
+          </div>
+
+          <div class="checkout-field">
+            <label for="checkoutAddress" data-i18n="payAddress">Shipping Address</label>
+            <div class="checkout-input-wrap">
+              <i class="fa-solid fa-location-dot"></i>
+              <input id="checkoutAddress" type="text" autocomplete="street-address" data-i18n-ph="checkoutAddressPh" placeholder="House number, street, city" required>
+            </div>
+            <small class="checkout-error" data-error-for="checkoutAddress"></small>
+          </div>
+
+          <div class="checkout-address-row">
+            <div class="checkout-field">
+              <label for="checkoutPhone" data-i18n="payPhone">Phone Number</label>
+              <div class="checkout-input-wrap">
+                <i class="fa-solid fa-phone"></i>
+                <input id="checkoutPhone" type="tel" inputmode="tel" autocomplete="tel" data-i18n-ph="checkoutPhonePh" placeholder="+855 12 345 678" required>
+              </div>
+              <small class="checkout-error" data-error-for="checkoutPhone"></small>
+            </div>
+            <div class="checkout-field">
+              <label for="checkoutCity" data-i18n="payCity">City / Province</label>
+              <div class="checkout-input-wrap">
+                <i class="fa-solid fa-city"></i>
+                <input id="checkoutCity" type="text" data-i18n-ph="checkoutCityPh" placeholder="Phnom Penh" required>
+              </div>
+              <small class="checkout-error" data-error-for="checkoutCity"></small>
+            </div>
+          </div>
+
+          <div class="checkout-field">
+            <label data-i18n="deliveryTitle">Delivery method</label>
+            <div class="checkout-delivery">
+              <label class="delivery-option">
+                <input type="radio" name="deliveryMethod" value="free" checked>
+                <span class="delivery-card"><span class="delivery-icon"><i class="fa-solid fa-truck"></i></span><span><strong data-i18n="deliveryFreeTitle">Standard Delivery</strong><small data-i18n="deliveryFreeDesc">2–4 business days • FREE</small></span><span class="delivery-check"><i class="fa-solid fa-check"></i></span></span>
+              </label>
+              <label class="delivery-option">
+                <input type="radio" name="deliveryMethod" value="express">
+                <span class="delivery-card"><span class="delivery-icon"><i class="fa-solid fa-bolt"></i></span><span><strong data-i18n="deliveryExpressTitle">Express Delivery</strong><small data-i18n="deliveryExpressDesc">1–2 business days • +$8</small></span><span class="delivery-check"><i class="fa-solid fa-check"></i></span></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="checkout-section-title payment-title">
+            <div class="checkout-section-icon"><i class="fa-regular fa-credit-card"></i></div>
+            <div><h3 data-i18n="checkoutPaymentTitle">Payment method</h3><p data-i18n="checkoutPaymentDesc">Your payment details are encrypted and secure.</p></div>
+          </div>
+
+          <div class="checkout-card-preview" id="cardPreview">
+            <div class="card-preview-top"><span>TECHZONE</span><i class="fa-solid fa-wifi"></i></div>
+            <div class="card-chip"></div>
+            <div class="card-preview-number" id="cardPreviewNumber">•••• •••• •••• ••••</div>
+            <div class="card-preview-bottom"><div><small>CARD HOLDER</small><strong id="cardPreviewName">YOUR NAME</strong></div><div><small>EXPIRES</small><strong id="cardPreviewExpiry">MM/YY</strong></div></div>
+            <span class="card-brand" id="cardBrand">CARD</span>
+          </div>
+
+          <div class="checkout-field">
+            <label for="checkoutCard" data-i18n="payCardNumber">Card Number</label>
+            <div class="checkout-input-wrap">
+              <i class="fa-regular fa-credit-card"></i>
+              <input id="checkoutCard" type="text" inputmode="numeric" autocomplete="cc-number" data-i18n-ph="checkoutCardPh" placeholder="1234 5678 9012 3456" maxlength="19" required>
+              <span class="input-card-brand" id="inputCardBrand">CARD</span>
+            </div>
+            <small class="checkout-error" data-error-for="checkoutCard"></small>
+          </div>
+
+          <div class="row gx-3">
+            <div class="col-6 checkout-field">
+              <label for="checkoutExpiry" data-i18n="payExpiry">Expiry Date</label>
+              <div class="checkout-input-wrap"><i class="fa-regular fa-calendar"></i><input id="checkoutExpiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" maxlength="7" required></div>
+              <small class="checkout-error" data-error-for="checkoutExpiry"></small>
+            </div>
+            <div class="col-6 checkout-field">
+              <label for="checkoutCvv" data-i18n="payCVV">CVV</label>
+              <div class="checkout-input-wrap"><i class="fa-solid fa-shield-halved"></i><input id="checkoutCvv" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="•••" maxlength="4" required><button class="cvv-toggle" type="button" id="cvvToggle" aria-label="Show CVV"><i class="fa-regular fa-eye"></i></button></div>
+              <small class="checkout-error" data-error-for="checkoutCvv"></small>
+            </div>
+          </div>
+
+          <label class="checkout-checkbox"><input type="checkbox" id="savePayment"><span></span><b data-i18n="checkoutSaveCard">Save payment details for next time</b></label>
+
+          <div class="checkout-security-note"><i class="fa-solid fa-lock"></i><span data-i18n="checkoutSecurityNote">Secure payment • Your card details are protected.</span></div>
+
+          <button type="submit" class="checkout-pay-btn" id="payNowBtn">
+            <span><i class="fa-solid fa-lock"></i><span data-i18n="payPayNow">Pay Now</span></span>
+            <strong id="checkoutPayTotal">$0.00</strong>
+          </button>
+        </form>
+
+        <aside class="checkout-summary">
+          <div class="summary-header"><div><span data-i18n="checkoutSummaryKicker">YOUR ORDER</span><h3 data-i18n="checkoutSummaryTitle">Order Summary</h3></div><span class="summary-count" id="checkoutSummaryCount">0 items</span></div>
+          <div id="checkoutSummaryItems" class="checkout-summary-items"></div>
+          <div class="summary-promo">
+            <input id="checkoutPromo" type="text" data-i18n-ph="promoPlaceholder" placeholder="Promo code">
+            <button type="button" id="applyPromo" data-i18n="promoApply">Apply</button>
+          </div>
+          <div class="summary-promo-msg" id="promoMessage"></div>
+          <div class="summary-totals">
+            <div><span data-i18n="summarySubtotal">Subtotal</span><strong id="checkoutSummarySubtotal">$0.00</strong></div>
+            <div><span data-i18n="summaryShipping">Shipping</span><strong class="free-shipping" id="checkoutSummaryShipping" data-i18n="summaryFree">FREE</strong></div>
+            <div><span data-i18n="summaryDiscount">Discount</span><strong id="checkoutSummaryDiscount">$0.00</strong></div>
+            <div><span data-i18n="summaryTax">Estimated tax</span><strong id="checkoutSummaryTax">$0.00</strong></div>
+          </div>
+          <div class="summary-total"><span data-i18n="summaryTotal">Total</span><strong id="checkoutSummaryTotal">$0.00</strong></div>
+          <div class="checkout-trust-list">
+            <div><i class="fa-solid fa-shield-halved"></i><span><b data-i18n="trustSecureTitle">Secure payment</b><small data-i18n="trustSecureDesc">256-bit encrypted</small></span></div>
+            <div><i class="fa-solid fa-truck-fast"></i><span><b data-i18n="trustShippingTitle">Fast delivery</b><small data-i18n="trustShippingDesc">Free shipping available</small></span></div>
+            <div><i class="fa-solid fa-rotate-left"></i><span><b data-i18n="trustReturnsTitle">Easy returns</b><small data-i18n="trustReturnsDesc">30-day return policy</small></span></div>
+          </div>
+          <div class="checkout-help"><i class="fa-regular fa-circle-question"></i><span data-i18n="checkoutNeedHelp">Need help? Contact our support team.</span></div>
+          <div class="checkout-payment-badges"><span data-i18n="paymentMethodsLabel">WE ACCEPT</span><div class="payment-brands"><b>VISA</b><b>MC</b><b>AMEX</b><b>JCB</b></div></div>
+        </aside>
+      </div>
+
+      <div id="successView" class="checkout-success d-none">
+        <div class="success-animation"><i class="fa-solid fa-check"></i></div>
+        <span class="checkout-kicker" data-i18n="successKicker">PAYMENT COMPLETE</span>
+        <h3 data-i18n="successTitle">Order Placed!</h3>
+        <p data-i18n="successMsg">Thank you for your purchase. Your order is being processed.</p>
+        <div class="success-order"><span data-i18n="orderNumberLabel">Order Number</span><strong id="orderNumberValue"></strong></div>
+        <button class="success-continue" data-bs-dismiss="modal" data-i18n="successContinue">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG ARTICLE MODAL -->
+<div class="modal fade" id="articleModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body pt-0" style="max-height:80vh;overflow-y:auto;">
+        <div class="mb-3 rounded-4 overflow-hidden" style="height:240px;background:var(--card-bg);">
+          <img id="articleImage" style="width:100%;height:100%;object-fit:cover;" src="" alt="">
+        </div>
+        <div class="blog-date mb-1" id="articleDate"></div>
+        <h4 class="fw-bold mb-3" id="articleTitle"></h4>
+        <div id="articleBody" class="text-body-secondary" style="font-size:.92rem;line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ea580c">
+  <title>Create account — TECHZONE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="signup-page">
+  <main class="auth-shell">
+    <section class="showcase" aria-label="TechZone account benefits">
+      <div class="brand-row">
+        <a class="brand" href="index.html">TECHZONE</a>
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i><span data-copy="back">Back to store</span></a>
+      </div>
+      <div class="showcase-copy">
+        <div class="showcase-kicker" data-copy="signupHeroKicker">Better shopping starts here</div>
+        <h2 data-copy="signupHeroTitle">Make TechZone <span>yours.</span></h2>
+        <p data-copy="signupHeroText">Create an account to move faster through checkout and keep your favorite technology close.</p>
+      </div>
+      <div class="trust-row">
+        <span class="trust-item"><i class="fa-solid fa-shield-halved"></i><span data-copy="secure">Secure checkout</span></span>
+        <span class="trust-item"><i class="fa-solid fa-rotate-left"></i><span data-copy="returns">30-day returns</span></span>
+        <span class="trust-item"><i class="fa-solid fa-headset"></i><span data-copy="support">24/7 support</span></span>
+      </div>
+    </section>
+    <section class="auth-side">
+      <div class="auth-wrap">
+        <div class="mobile-brand"><a href="index.html">TECHZONE</a><a href="index.html" data-copy="back">Back to store</a></div>
+        <div class="lang-switch" aria-label="Language">
+          <button type="button" data-lang="en">EN</button><button type="button" data-lang="km">ខ្មែរ</button>
+        </div>
+        <div class="eyebrow" data-copy="signupKicker">Create your account</div>
+        <h1 class="auth-title" data-copy="signupTitle">Join TechZone</h1>
+        <p class="auth-subtitle" data-copy="signupSub">Create one account for faster shopping and order updates.</p>
+        <div class="form-message" id="formMessage"></div>
+        <form id="signupForm" novalidate>
+          <div class="field">
+            <div class="field-header"><label for="name" data-copy="name">Full name</label></div>
+            <div class="input-wrap"><i class="fa-regular fa-id-card"></i><input id="name" name="name" type="text" autocomplete="name" data-copy-placeholder="namePh" placeholder="Your full name" aria-describedby="error-name"></div>
+            <div class="error-msg" id="error-name"></div>
+          </div>
+          <div class="field">
+            <div class="field-header"><label for="username" data-copy="username">Username</label></div>
+            <div class="input-wrap"><i class="fa-regular fa-user"></i><input id="username" name="username" type="text" autocomplete="username" data-copy-placeholder="usernamePh" placeholder="Choose a username" aria-describedby="error-username"></div>
+            <div class="error-msg" id="error-username"></div>
+          </div>
+          <div class="field">
+            <div class="field-header"><label for="email" data-copy="email">Email address</label></div>
+            <div class="input-wrap"><i class="fa-regular fa-envelope"></i><input id="email" name="email" type="email" autocomplete="email" data-copy-placeholder="emailPh" placeholder="you@example.com" aria-describedby="error-email"></div>
+            <div class="error-msg" id="error-email"></div>
+          </div>
+          <div class="field">
+            <div class="field-header"><label for="password" data-copy="newPassword">Create password</label></div>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="password" name="password" type="password" autocomplete="new-password" data-copy-placeholder="newPasswordPh" placeholder="At least 8 characters" aria-describedby="error-password"><button class="password-toggle" type="button" data-target="password" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+            <div class="strength" aria-hidden="true"><span></span><span></span><span></span><span></span></div><small class="strength-label"></small>
+            <div class="error-msg" id="error-password"></div>
+          </div>
+          <div class="field">
+            <div class="field-header"><label for="confirmPassword" data-copy="confirm">Confirm password</label></div>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" data-copy-placeholder="confirmPh" placeholder="Enter it again" aria-describedby="error-confirmPassword"><button class="password-toggle" type="button" data-target="confirmPassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+            <div class="error-msg" id="error-confirmPassword"></div>
+          </div>
+          <label class="check-row"><input type="checkbox" id="terms"><span data-copy="terms">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</span></label>
+          <div class="error-msg" id="error-terms"></div>
+          <button class="submit-btn" type="submit"><span data-copy="createBtn">Create account</span><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <p class="switch-line"><span data-copy="hasAccount">Already have an account?</span> <a href="login.html" data-copy="signInLink">Sign in</a></p>
+        <p class="demo-note" data-copy="demo">Demo note: account data stays only in this browser. Connect a secure backend before production.</p>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

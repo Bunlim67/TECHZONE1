@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ea580c">
+  <title>Sign in — TECHZONE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="showcase" aria-label="TechZone account benefits">
+      <div class="brand-row">
+        <a class="brand" href="index.html">TECHZONE</a>
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i><span data-copy="back">Back to store</span></a>
+      </div>
+      <div class="showcase-copy">
+        <div class="showcase-kicker" data-copy="loginHeroKicker">Your tech, one account</div>
+        <h2 data-copy="loginHeroTitle">Pick up where you <span>left off.</span></h2>
+        <p data-copy="loginHeroText">Save your details, return to your cart, and keep every TechZone order within easy reach.</p>
+      </div>
+      <div class="trust-row">
+        <span class="trust-item"><i class="fa-solid fa-shield-halved"></i><span data-copy="secure">Secure checkout</span></span>
+        <span class="trust-item"><i class="fa-solid fa-rotate-left"></i><span data-copy="returns">30-day returns</span></span>
+        <span class="trust-item"><i class="fa-solid fa-headset"></i><span data-copy="support">24/7 support</span></span>
+      </div>
+    </section>
+    <section class="auth-side">
+      <div class="auth-wrap">
+        <div class="mobile-brand"><a href="index.html">TECHZONE</a><a href="index.html" data-copy="back">Back to store</a></div>
+        <div class="lang-switch" aria-label="Language">
+          <button type="button" data-lang="en">EN</button><button type="button" data-lang="km">ខ្មែរ</button>
+        </div>
+        <div class="eyebrow" data-copy="kickerLogin">Member access</div>
+        <h1 class="auth-title" data-copy="loginTitle">Welcome back</h1>
+        <p class="auth-subtitle" data-copy="loginSub">Sign in to manage your TechZone shopping experience.</p>
+        <div class="form-message" id="formMessage"></div>
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <div class="field-header"><label for="identity" data-copy="identity">Email or username</label></div>
+            <div class="input-wrap"><i class="fa-regular fa-user"></i><input id="identity" name="identity" type="text" autocomplete="username" data-copy-placeholder="identityPh" placeholder="you@example.com" aria-describedby="error-identity"></div>
+            <div class="error-msg" id="error-identity"></div>
+          </div>
+          <div class="field">
+            <div class="field-header"><label for="password" data-copy="password">Password</label><button class="field-link" id="forgotPassword" type="button" data-copy="forgot">Forgot password?</button></div>
+            <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="password" name="password" type="password" autocomplete="current-password" data-copy-placeholder="passwordPh" placeholder="Enter your password" aria-describedby="error-password"><button class="password-toggle" type="button" data-target="password" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+            <div class="error-msg" id="error-password"></div>
+          </div>
+          <label class="check-row"><input type="checkbox" id="remember" checked><span data-copy="remember">Keep me signed in on this device</span></label>
+          <button class="submit-btn" type="submit"><span data-copy="signIn">Sign in</span><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <p class="switch-line"><span data-copy="noAccount">New to TechZone?</span> <a href="signup.html" data-copy="create">Create an account</a></p>
+        <p class="demo-note" data-copy="demo">Demo note: account data stays only in this browser. Connect a secure backend before production.</p>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
